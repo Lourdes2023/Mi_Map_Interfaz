@@ -9,7 +9,7 @@ body {
     align-items: center ;
     width: 200px;
     height: 100vh;
-    background: linear-gradient(to bottom, #2ecc71, #2b7a78);
+    background: linear-gradient(to bottom,  #34495e, #4e5f70);
     color: white;
     padding: 15px;
 }
@@ -38,7 +38,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to right, #2ecc71, #2b7a78);
+    background: linear-gradient(to right,  #34495e, #4e5f70);
     color: white;
     padding: 10px 20px;
 }
