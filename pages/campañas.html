@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiMap - Gestión de Comercios e Industrias</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>MiMap</h2>
+        <a href="./comercios.html">Comercios</a>
+        <a href="./industrias.html">Industrias</a>
+        <a href="./campañas.html">Campañas</a>
+        <a href="./reportes.html">Reportes</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar..." id="search">
+            </div>
+            <div class="filter">
+                <label for="filter">Filtrar</label>
+                <select id="filter">
+                    <option value="Activo">Activos</option>
+                    <option value="Inactivo">Inactivos</option>
+                    <option value="todos">Todos</option>
+                </select>
+                <select id="filter-type">
+                    <option value="todos">Todos</option>
+                    <option value="C1MB">C1MB(Comercial De Densidad Media Baja )</option>
+                    <option value="AC">AC-(Area Centro)</option>
+                    <option value="C1">C1-(Comercial)</option>
+                    <!-- Agregar más opciones según los rubros existentes -->
+                </select>
+                <select id="filter-rubro">
+                    <option value="todos">Todos</option>
+                    <option value="Carnicerías y granjas">Carnicerías y granjas</option>
+                    <option value="Almacenes y Autoservicios">Almacenes y Autoservicios</option>
+                    <option value="Ferreterias">Ferreterias</option>
+                    <!-- Agregar más opciones según los rubros existentes -->
+                </select>
+
+            </div>
+            <a href="#" class="button-alta" id="button-alta">Alta</a>
+            <div class="user">
+                <i class="fas fa-user" style="font-size:20px; padding:10px; "></i>
+                <span>Usuario Adm</span>
+            </div>
+        </div>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Nombre de campaña</th>
+                    <th>Descripción</th>
+                    <th>Comercio</th>
+                    <th>Rubro</th>
+                    <th>Fecha de inicio</th>
+                    <th>Fecha de fin</th>
+                    <th>Corredor</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Datos iniciales se renderizarán aquí -->
+            </tbody>
+        </table>
+    </div>
+     
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h3 id="modal-title">Agregar Campaña</h3>
+            <form id="data-form">
+                <label for="name">Nombre de campaña:</label>
+                <input type="text" id="name" required>
+                <br>
+                <label for="description">Descripción:</label>
+                <input type="text" id="description" required>
+                <br>
+                <label for="commerce">Comercio:</label>
+                <input type="text" id="commerce" required>
+                <br>
+                <label for="type">Corredor:</label>
+                <select id="type">
+                    <option value="C1MB">C1MB(Comercial De Densidad Media Baja )</option>
+                    <option value="AC">AC-(Area Centro)</option>
+                    <option value="C1">C1-(Comercial)</option>
+                    <!-- Agregar más opciones según los rubros existentes -->
+                </select>
+                <br>
+                <label for="location">Domicilio:</label>
+                <input type="text" id="location" required>
+                <br>
+                <label for="activity">Rubro:</label>
+                <select id="activity">
+                    <option value="Carnicerías y granjas">Carnicerías y granjas</option>
+                    <option value="Almacenes y Autoservicios">Almacenes y Autoservicios</option>
+                    <option value="Ferreterias">Ferreterias</option>
+                    <!-- Agregar más opciones según los rubros existentes -->
+                </select>
+                <br>
+                <label for="campaign-start-date">Fecha de inicio:</label>
+                <input type="date" id="campaign-start-date" required>
+                <br>
+                <label for="campaign-end-date">Fecha de fin:</label>
+                <input type="date" id="campaign-end-date" required>
+                <br>
+                <br>
+                <label for="status">Estado:</label>
+                <select id="status">
+                    <option value="Activo">Activo</option>
+                    <option value="Inactivo">Inactivo</option>
+                </select>
+                <br><br>
+                <button type="submit">Guardar</button>
+                <button type="button" id="close-modal">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./script_campañas.js"></script>
+</body>
+</html>
