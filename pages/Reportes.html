@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Reportes</title>
+	<title>MiMap - Gestión de Comercios e Industrias</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>MiMap</h2>
+        <a href="./comercios.html">Comercios</a>
+        <a href="./industrias.html">Industrias</a>
+        <a href="./campañas.html">Campañas</a>
+        <a href="./reportes.html">Reportes</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar..." id="search">
+            </div>
+            <div class="filter">
+                <label for="filter">Filtrar</label>
+                <select id="filter">
+                    <option value="Activo">Activos</option>
+                    <option value="Inactivo">Inactivos</option>
+                    <option value="todos">Todos</option>
+                </select>
+                <select id="filter-type">
+                    <option value="todos">Todos</option>
+                    <option value="C1MB">C1MB(Comercial De Densidad Media Baja )</option>
+                    <option value="AC">AC-(Area Centro)</option>
+                    <option value="C1">C1-(Comercial)</option>
+                    <!-- Agregar más opciones según los rubros existentes -->
+                </select>
+                <select id="filter-rubro">
+                    <option value="todos">Todos</option>
+                    <option value="Carnicerías y granjas">Carnicerías y granjas</option>
+                    <option value="Almacenes y Autoservicios">Almacenes y Autoservicios</option>
+                    <option value="Ferreterias">Ferreterias</option>
+                    <!-- Agregar más opciones según los rubros existentes -->
+                </select>
+
+            </div>
+            <a href="#" class="button-alta" id="button-alta">Alta</a>
+            <div class="user">
+                <i class="fas fa-user" style="font-size:20px; padding:10px; "></i>
+                <span>Usuario Adm</span>
+            </div>
+        </div>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Corredor</th>
+                    <th>Dirección</th>
+                    <th>Rubro</th>
+                    <th>Teléfono</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <h1> Próximamente Reportes</h1>
+            </tbody>
+        </table>
+	  </div>    
+</body>
+</html>
